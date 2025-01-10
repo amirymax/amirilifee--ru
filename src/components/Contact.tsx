@@ -6,6 +6,38 @@ import { Textarea } from "./ui/textarea";
 import { Github, Mail, MessageSquare } from "lucide-react";
 import { useToast } from "./ui/use-toast";
 
+const BOT_TOKEN = "7896528015:AAHonD4gkY3xb2GDG_jE686DABM_R1YuVUk";
+const CHAT_ID = "1007463279";
+const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+const sendToTelegram = async (data: { name: string; email: string; message: string }) => {
+  const message = `
+📝 Новое сообщение с сайта:
+👤 Имя: ${data.name}
+📧 Email: ${data.email}
+💬 Сообщение: ${data.message}
+  `;
+
+  try {
+    const response = await fetch(TELEGRAM_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "Markdown",
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send message to Telegram");
+    }
+
+    console.log("Message sent successfully to Telegram!");
+  } catch (error) {
+    console.error("Error sending message to Telegram:", error);
+  }
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -14,14 +46,32 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const [isLoading, setIsLoading] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  try {
+    await sendToTelegram(formData);
+
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Сообщение отправлено!",
+      description: "Спасибо за ваш запрос. Я скоро свяжусь с вами.",
     });
+
     setFormData({ name: "", email: "", message: "" });
-  };
+  } catch {
+    toast({
+      title: "Ошибка",
+      description: "Не удалось отправить сообщение. Попробуйте позже.",
+    });
+  } finally {
+    setIsLoading(false);
+  }
+};
+
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -83,9 +133,10 @@ const Contact = () => {
                   className="min-h-[150px]"
                 />
               </div>
-              <Button type="submit" className="w-full">
-                Отправить Сообщение
-              </Button>
+              <Button type="submit" className="w-full" disabled={isLoading}>
+              {isLoading ? "Отправка..." : "Отправить Сообщение"}
+            </Button>
+
             </form>
           </motion.div>
 
