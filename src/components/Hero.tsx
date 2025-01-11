@@ -10,7 +10,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-
+      
       <div className="container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,6 +53,7 @@ const Hero = () => {
               <a href="#contact">Связаться</a>
             </Button>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +62,7 @@ const Hero = () => {
           >
             <Button variant="outline" size="lg" asChild>
               <Link to="/roadmaps" className="group">
-                Дорожные карты
+                Roadmaps
                 <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -71,3 +72,5 @@ const Hero = () => {
     </section>
   );
 };
+
+export default Hero;
