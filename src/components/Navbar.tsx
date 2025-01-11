@@ -21,7 +21,7 @@ const Navbar = () => {
     { label: "Услуги", href: "#services" },
     { label: "Проекты", href: "#projects" },
     { label: "Обо мне", href: "#about" },
-    { label: "Дорожные карты", href: "/roadmaps" },
+    { label: "Roadmaps", href: "/roadmaps" },
     { label: "Контакты", href: "#contact" },
   ];
 
@@ -109,4 +109,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
