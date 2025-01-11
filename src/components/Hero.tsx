@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-      
+
       <div className="container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,21 +45,29 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <a href="#projects">
             <Button size="lg" className="group">
               Мои Работы
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button></a>
-            <a href="#contact">
+            </Button>
             <Button size="lg" variant="secondary">
-              Связаться
-            </Button></a>
-              
+              <a href="#contact">Связаться</a>
+            </Button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="mt-4"
+          >
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/roadmaps" className="group">
+                Дорожные карты
+                <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
 };
-
-export default Hero;
