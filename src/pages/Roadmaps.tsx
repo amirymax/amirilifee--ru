@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { PythonRoadmap } from "@/components/roadmaps/PythonRoadmap";
 import { DjangoRoadmap } from "@/components/roadmaps/DjangoRoadmap";
 import { TelegramRoadmap } from "@/components/roadmaps/TelegramRoadmap";
 import { AlgorithmsRoadmap } from "@/components/roadmaps/AlgorithmsRoadmap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Roadmaps = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeTab, setActiveTab] = useState("python");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +21,49 @@ const Roadmaps = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const roadmapTabs = [
+    { name: "Python", value: "python" },
+    { name: "Django", value: "django" },
+    { name: "Создание телеграм бота", value: "telegram" },
+    { name: "Алгоритмы", value: "algorithms" },
+  ];
+
+  const handleContactClick = () => {
+    navigate('/#contact');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      contactSection?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const SideMenu = () => (
+    <div className="flex flex-col gap-2">
+      {roadmapTabs.map((tab) => (
+        <Button
+          key={tab.value}
+          variant={activeTab === tab.value ? "secondary" : "ghost"}
+          className="w-full justify-start"
+          onClick={() => setActiveTab(tab.value)}
+        >
+          {tab.name}
+        </Button>
+      ))}
+      
+      <div className="mt-8 border-t pt-6"> {/* Увеличено вертикальное расстояние */}
+          <Button
+            size="lg"
+            className="w-full py-6 px-6 gap-3 text-sm sm:text-base flex items-center justify-center leading-relaxed rounded-lg shadow-lg"
+            onClick={handleContactClick}
+            style={{height: '60px'}}
+          >
+{/*             <MessageCircle size={64} /> */}
+              Нужен ментор?<br />Оставь заявку 💬 
+          </Button>
+      </div>
+
+    </div>
+  );
 
   return (
     <div>
@@ -28,37 +76,41 @@ const Roadmaps = () => {
           <Link to="/" className="text-2xl font-bold text-gradient">
             Amiri | Главное
           </Link>
+          <Sheet>
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-[240px] sm:w-[280px]">
+              <SideMenu />
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
 
       <div className="min-h-screen pt-20 section-padding">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-gradient">Roadmaps</h1>
+        <div className="container mx-auto flex flex-col lg:flex-row">
+          <aside className="hidden lg:block w-64 sticky top-24 h-fit">
+            <SideMenu />
+          </aside>
 
-          <Tabs defaultValue="python" className="w-full">
-            <TabsList className="mb-8 flex flex-wrap gap-2 justify-start">
-              <TabsTrigger value="python" className="flex-grow sm:flex-grow-0">Python</TabsTrigger>
-              <TabsTrigger value="django" className="flex-grow sm:flex-grow-0">Django</TabsTrigger>
-              <TabsTrigger value="telegram" className="flex-grow sm:flex-grow-0">Создание телеграм бота</TabsTrigger>
-              <TabsTrigger value="algorithms" className="flex-grow sm:flex-grow-0">Алгоритмы</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="python">
-              <PythonRoadmap />
-            </TabsContent>
-
-            <TabsContent value="django">
-              <DjangoRoadmap />
-            </TabsContent>
-
-            <TabsContent value="telegram">
-              <TelegramRoadmap />
-            </TabsContent>
-
-            <TabsContent value="algorithms">
-              <AlgorithmsRoadmap />
-            </TabsContent>
-          </Tabs>
+          <main className="flex-1 lg:pl-8">
+            <Tabs value={activeTab} className="w-full">
+              <TabsContent value="python" data-value="python">
+                <PythonRoadmap />
+              </TabsContent>
+              <TabsContent value="django" data-value="django">
+                <DjangoRoadmap />
+              </TabsContent>
+              <TabsContent value="telegram" data-value="telegram">
+                <TelegramRoadmap />
+              </TabsContent>
+              <TabsContent value="algorithms" data-value="algorithms">
+                <AlgorithmsRoadmap />
+              </TabsContent>
+            </Tabs>
+          </main>
         </div>
       </div>
     </div>
