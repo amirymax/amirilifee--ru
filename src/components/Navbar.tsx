@@ -22,7 +22,6 @@ const Navbar = () => {
     { label: "Проекты", href: "#projects" },
     { label: "Обо мне", href: "#about" },
     { label: "Roadmaps", href: "/roadmaps" },
-    { label: "Контакты", href: "#contact" },
   ];
 
   return (
