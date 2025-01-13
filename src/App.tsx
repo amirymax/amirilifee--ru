@@ -10,7 +10,7 @@ import Roadmaps from "./pages/Roadmaps";
 const queryClient = new QueryClient();
 
 const App = () => (
-<QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={queryClient}>
     <LanguageProvider>
       <TooltipProvider>
         <Toaster />
@@ -23,5 +23,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </LanguageProvider>
-</QueryClientProvider>
+  </QueryClientProvider>
 );
+
+export default App;
