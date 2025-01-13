@@ -81,7 +81,9 @@ export const translations = {
         name: "Your Name",
         email: "Your Email",
         message: "Your Message",
-        send: "Send Message"
+        send: "Send Message",
+        sendSuccess: "Message sent!",
+        sendMessage: "Thank you for reaching out. I'll get back to you soon."
       },
       info: {
         title: "Contact Information",
@@ -175,7 +177,9 @@ export const translations = {
         name: "Ваше Имя",
         email: "Ваш Email",
         message: "Ваше Сообщение",
-        send: "Отправить Сообщение"
+        send: "Отправить Сообщение",
+        sendSuccess: "Сообщение отправлено!",
+        sendMessage: "Спасибо за обращение. Я свяжусь с вами в ближайшее время."
       },
       info: {
         title: "Контактная Информация",
