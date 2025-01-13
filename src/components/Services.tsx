@@ -1,40 +1,43 @@
 import { Code2, Bot, BookOpen, Users, MessageSquare, Binary } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const services = [
   {
     icon: Code2,
-    title: "Веб-разработка",
-    description: "Создание современных, адаптивных веб-сайтов с использованием передовых технологий.",
+    titleKey: "services.items.0.title",
+    descriptionKey: "services.items.0.description",
   },
   {
     icon: Bot,
-    title: "Создание Telegram Ботов",
-    description: "Разработка пользовательских Telegram ботов для различных целей.",
+    titleKey: "services.items.1.title",
+    descriptionKey: "services.items.1.description",
   },
   {
     icon: BookOpen,
-    title: "Обучение Python",
-    description: "Обучение основам программирования на Python для начинающих.",
+    titleKey: "services.items.2.title",
+    descriptionKey: "services.items.2.description",
   },
   {
     icon: Users,
-    title: "Индивидуальное Наставничество",
-    description: "Персональное руководство для начинающих разработчиков.",
+    titleKey: "services.items.3.title",
+    descriptionKey: "services.items.3.description",
   },
   {
     icon: MessageSquare,
-    title: "Обучение Разработке Ботов",
-    description: "Комплексное обучение созданию и управлению Telegram ботами.",
+    titleKey: "services.items.4.title",
+    descriptionKey: "services.items.4.description",
   },
   {
     icon: Binary,
-    title: "Обучение Алгоритмам",
-    description: "Изучение основных алгоритмов и техник решения задач.",
+    titleKey: "services.items.5.title",
+    descriptionKey: "services.items.5.description",
   },
 ];
 
 const Services = () => {
+  const { t } = useLanguage(); // Используем функцию перевода
+
   return (
     <section id="services" className="section-padding">
       <div className="container">
@@ -45,17 +48,18 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Мои Услуги</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t("services.title")}
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Комплексные решения, адаптированные под ваши потребности, от веб-разработки до
-            обучения программированию.
+            {t("services.description")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.titleKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -63,8 +67,10 @@ const Services = () => {
               className="glass p-6 rounded-lg hover-card"
             >
               <service.icon className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <h3 className="text-xl font-semibold mb-2">
+                {t(service.titleKey)}
+              </h3>
+              <p className="text-muted-foreground">{t(service.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>
