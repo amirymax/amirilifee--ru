@@ -3,10 +3,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +19,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Главная", href: "/" },
-    { label: "Услуги", href: "#services" },
-    { label: "Проекты", href: "#projects" },
-    { label: "Обо мне", href: "#about" },
-    { label: "Roadmaps", href: "/roadmaps" },
+    { label: t('nav.home'), href: "/" },
+    { label: t('nav.services'), href: "#services" },
+    { label: t('nav.projects'), href: "#projects" },
+    { label: t('nav.about'), href: "#about" },
+    { label: t('nav.roadmaps'), href: "/roadmaps" },
+    { label: t('nav.contacts'), href: "#contact" },
   ];
 
   return (
@@ -57,7 +60,7 @@ const Navbar = () => {
             )
           ))}
           <Button variant="secondary" className="ml-4" asChild>
-            <a href="#contact">Связаться</a>
+            <a href="#contact">{t('nav.getInTouch')}</a>
           </Button>
           <LanguageSwitcher />
         </div>
@@ -99,7 +102,7 @@ const Navbar = () => {
                 )
               ))}
               <Button variant="secondary" asChild>
-                <a href="#contact">Связаться</a>
+                <a href="#contact">{t('nav.getInTouch')}</a>
               </Button>
             </div>
           </div>
