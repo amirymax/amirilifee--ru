@@ -5,73 +5,25 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Github, Mail, MessageSquare } from "lucide-react";
 import { useToast } from "./ui/use-toast";
-
-const BOT_TOKEN = "7896528015:AAHonD4gkY3xb2GDG_jE686DABM_R1YuVUk";
-const CHAT_ID = "1007463279";
-const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-const sendToTelegram = async (data: { name: string; email: string; message: string }) => {
-  const message = `
-📝 Новое сообщение с сайта:
-👤 Имя: ${data.name}
-📧 Email: ${data.email}
-💬 Сообщение: ${data.message}
-  `;
-
-  try {
-    const response = await fetch(TELEGRAM_API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: message,
-        parse_mode: "Markdown",
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to send message to Telegram");
-    }
-
-    console.log("Message sent successfully to Telegram!");
-  } catch (error) {
-    console.error("Error sending message to Telegram:", error);
-  }
-};
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage(); // Используем перевод
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-const [isLoading, setIsLoading] = useState(false);
-
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsLoading(true);
-
-  try {
-    await sendToTelegram(formData);
-
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     toast({
-      title: "Сообщение отправлено!",
-      description: "Спасибо за ваш запрос. Я скоро свяжусь с вами.",
+      title: t("contact.form.sendSuccess"),
+      description: t("contact.form.sendMessage"),
     });
-
     setFormData({ name: "", email: "", message: "" });
-  } catch {
-    toast({
-      title: "Ошибка",
-      description: "Не удалось отправить сообщение. Попробуйте позже.",
-    });
-  } finally {
-    setIsLoading(false);
-  }
-};
-
-
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -89,14 +41,16 @@ const handleSubmit = async (e: React.FormEvent) => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Связаться со Мной</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t("contact.title")}
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Есть проект или хотите изучать программирование? Буду рад обсудить
-            с вами.
+            {t("contact.description")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Форма */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +60,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Ваше Имя"
+                  placeholder={t("contact.form.name")}
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -116,7 +70,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div>
                 <Input
                   type="email"
-                  placeholder="Ваш Email"
+                  placeholder={t("contact.form.email")}
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -125,7 +79,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
               <div>
                 <Textarea
-                  placeholder="Ваше Сообщение"
+                  placeholder={t("contact.form.message")}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -133,13 +87,13 @@ const handleSubmit = async (e: React.FormEvent) => {
                   className="min-h-[150px]"
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Отправка..." : "Отправить Сообщение"}
-            </Button>
-
+              <Button type="submit" className="w-full">
+                {t("contact.form.send")}
+              </Button>
             </form>
           </motion.div>
 
+          {/* Контактная информация */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -148,7 +102,9 @@ const handleSubmit = async (e: React.FormEvent) => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-semibold mb-4">Контактная Информация</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("contact.info.title")}
+              </h3>
               <div className="space-y-4">
                 <a
                   href="mailto:amirymax@mail.com"
@@ -179,10 +135,11 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
 
             <div className="glass p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Быстрый Ответ</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("contact.info.quickResponse.title")}
+              </h3>
               <p className="text-muted-foreground mb-4">
-                Нужен быстрый ответ? Свяжитесь со мной через Telegram для
-                оперативного общения.
+                {t("contact.info.quickResponse.description")}
               </p>
               <Button variant="secondary" className="w-full" asChild>
                 <a
@@ -191,7 +148,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   rel="noopener noreferrer"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  Написать в Telegram
+                  {t("contact.info.quickResponse.button")}
                 </a>
               </Button>
             </div>
