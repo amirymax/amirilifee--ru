@@ -48,7 +48,25 @@ export const translations = {
     },
     projects: {
       title: "Featured Projects",
-      description: "Showcasing my best work, demonstrating my skills and experience across various technologies."
+      description: "Showcasing my best work, demonstrating my skills and experience across various technologies.",
+      items: {
+        bebetter: {
+          title: "BeBetter",
+          description: "A platform to help you with self-development."
+        },
+        sofiai: {
+          title: "SofiAI",
+          description: "An advanced voice assistant with machine learning integration for interactive and context-aware interaction."
+        },
+        twitclone: {
+          title: "TwitClone",
+          description: "A Twitter clone built using Django."
+        },
+        moodmonitorbot: {
+          title: "MoodMonitorBot",
+          description: "This bot helps analyze your emotional state based on text, audio, and video."
+        }
+      }
     },
     about: {
       title: "About Me",
@@ -124,7 +142,25 @@ export const translations = {
     },
     projects: {
       title: "Избранные Проекты",
-      description: "Демонстрация моих лучших работ, показывающая мои навыки и опыт в различных технологиях."
+      description: "Демонстрация моих лучших работ, показывающая мои навыки и опыт в различных технологиях.",
+      items: {
+        bebetter: {
+          title: "BeBetter",
+          description: "Платформа которая поможет вам саморазвиваться"
+        },
+        sofiai: {
+          title: "SofiAI",
+          description: "Продвинутый голосовой ассистент с интеграцией машинного обучения для интерактивного и контекстно-зависимого взаимодействия"
+        },
+        twitclone: {
+          title: "TwitClone",
+          description: "Клон Twitter, разработанный с использованием Django"
+        },
+        moodmonitorbot: {
+          title: "MoodMonitorBot",
+          description: "Этот бот поможет определить ваше эмоциональное состояние на основе текста, аудио и видео"
+        }
+      }
     },
     about: {
       title: "Обо Мне",
