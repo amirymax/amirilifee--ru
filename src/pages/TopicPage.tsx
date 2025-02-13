@@ -15,7 +15,7 @@ const topicData: Record<string, TopicSection[]> = {
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/contains-duplicate/",
           youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Leetcode%20%D0%BF%D0%BE%20%D0%BF%D1%83%D1%82%D0%B8!/217.%20Contains%20Duplicate.py",
         },
         {
           name: "Valid Anagram",
