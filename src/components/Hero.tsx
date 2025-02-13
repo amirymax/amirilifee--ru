@@ -65,7 +65,7 @@ const Hero = () => {
           >
             <Button variant="outline" size="lg" asChild>
               <Link to="/interview" className="group">
-                Подготовка к интервью
+                {t('hero.interview')}
                 <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
