@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
@@ -47,18 +48,13 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <a href="#projects">
             <Button size="lg" className="group">
               {t('hero.myWorks')}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-              </a>
-
-            <a href="#contact">
             <Button size="lg" variant="secondary">
-              {t('hero.contact')}
+              <a href="#contact">{t('hero.contact')}</a>
             </Button>
-              </a>
           </motion.div>
 
           <motion.div
@@ -68,8 +64,8 @@ const Hero = () => {
             className="mt-4"
           >
             <Button variant="outline" size="lg" asChild>
-              <Link to="/roadmaps" className="group">
-                Roadmaps
+              <Link to="/interview" className="group">
+                Подготовка к интервью
                 <BookOpen className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
