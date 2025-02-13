@@ -6,14 +6,16 @@ export const translations = {
       projects: "Projects",
       about: "About",
       roadmaps: "Roadmaps",
+      contacts: "Contacts",
+      getInTouch: "Get in Touch",
       interview: "Algo Prep",
-      getInTouch: "Get in Touch"
     },
     hero: {
       greeting: "Hi, I'm",
       title: "Professional Developer",
       description: "I create elegant solutions through code, specializing in web development, Telegram bots, and programming education.",
       myWorks: "My Works",
+      contact: "Contact",
       interview: "Algo Prep",
     },
     services: {
@@ -81,7 +83,9 @@ export const translations = {
         name: "Your Name",
         email: "Your Email",
         message: "Your Message",
-        send: "Send Message"
+        send: "Send Message",
+        sendSuccess: "Message sent!",
+        sendMessage: "Thank you for reaching out. I'll get back to you soon."
       },
       info: {
         title: "Contact Information",
@@ -100,14 +104,16 @@ export const translations = {
       projects: "Проекты",
       about: "Обо мне",
       roadmaps: "Roadmaps",
+      contacts: "Контакты",
+      getInTouch: "Связаться",
       interview: "Подтяни Алгосы",
-      getInTouch: "Связаться"
     },
     hero: {
       greeting: "Привет, я",
       title: "Профессиональный Разработчик",
       description: "Я создаю элегантные решения с помощью кода, специализируюсь на веб-разработке, Telegram ботах и обучении программированию.",
       myWorks: "Мои Работы",
+      contact: "Связаться",
       interview: "Подтяни Алгосы",
     },
     services: {
@@ -175,7 +181,9 @@ export const translations = {
         name: "Ваше Имя",
         email: "Ваш Email",
         message: "Ваше Сообщение",
-        send: "Отправить Сообщение"
+        send: "Отправить Сообщение",
+        sendSuccess: "Сообщение отправлено!",
+        sendMessage: "Спасибо за обращение. Я свяжусь с вами в ближайшее время."
       },
       info: {
         title: "Контактная Информация",
