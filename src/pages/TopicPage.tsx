@@ -21,7 +21,7 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Valid Anagram",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/valid-anagram/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
+          youtubeUrl: "https://youtu.be/BsfNa_YOGQU",
           githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/242.%20Valid%20Anagram.py",
         },
         {
