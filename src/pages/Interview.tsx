@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const interviewTopics = [
   { name: "Arrays & Hashing", value: "arrays" },
@@ -25,6 +26,7 @@ const interviewTopics = [
 
 const Interview = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const handleContactClick = () => {
     navigate('/#contact');
@@ -69,10 +71,10 @@ const Interview = () => {
           <div className="space-y-8">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-4">
-                Interview Preparation
+                {t('interview.title')}
               </h2>
               <p className="text-muted-foreground">
-                Choose a topic to practice problems and prepare for technical interviews
+                {t('interview.description')}
               </p>
             </div>
 
