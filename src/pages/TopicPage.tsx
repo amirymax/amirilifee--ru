@@ -29,7 +29,7 @@ const topicData: Record<string, TopicSection[]> = {
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/two-sum/",
           youtubeUrl: "https://www.youtube.com/watch?v=KLlXCFG5TnA",
-          githubUrl: "https://github.com/example/two-sum",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/1.%20Two%20Sum.py",
         },
         {
           name: "Group Anagrams",
