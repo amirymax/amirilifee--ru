@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,16 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
 
   const navItems = [
     { label: t('nav.home'), href: "/" },
@@ -43,13 +54,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             item.href.startsWith("#") ? (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
+                onClick={() => handleNavigation(item.href)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
-              </a>
+              </button>
             ) : (
               <Link
                 key={item.label}
@@ -60,8 +71,8 @@ const Navbar = () => {
               </Link>
             )
           ))}
-          <Button variant="secondary" className="ml-4" asChild>
-            <a href="#contact">{t('nav.getInTouch')}</a>
+          <Button variant="secondary" className="ml-4" onClick={() => handleNavigation("#contact")}>
+            {t('nav.getInTouch')}
           </Button>
           <LanguageSwitcher />
         </div>
@@ -83,14 +94,16 @@ const Navbar = () => {
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 item.href.startsWith("#") ? (
-                  <a
+                  <button
                     key={item.label}
-                    href={item.href}
+                    onClick={() => {
+                      handleNavigation(item.href);
+                      setIsOpen(false);
+                    }}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </button>
                 ) : (
                   <Link
                     key={item.label}
@@ -102,8 +115,11 @@ const Navbar = () => {
                   </Link>
                 )
               ))}
-              <Button variant="secondary" asChild>
-                <a href="#contact">{t('nav.getInTouch')}</a>
+              <Button variant="secondary" onClick={() => {
+                handleNavigation("#contact");
+                setIsOpen(false);
+              }}>
+                {t('nav.getInTouch')}
               </Button>
             </div>
           </div>
