@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { TopicCard } from "@/components/interview/TopicCard";
 import { TopicSection } from "@/components/interview/types";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const topicData: Record<string, TopicSection[]> = {
   "arrays": [
@@ -134,8 +135,8 @@ const TopicPage = () => {
             className="mb-6"
             onClick={() => navigate("/interview")}
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Topics
+              <ArrowLeft className="mr-2 h-4 w-4" />
+            {t('interview.backToTopics')}
           </Button>
           
           <div className="space-y-8">
@@ -144,7 +145,7 @@ const TopicPage = () => {
                 {topicTitle || "Topic Not Found"}
               </h2>
               <p className="text-muted-foreground">
-                Practice problems for {topicTitle?.toLowerCase()}
+                {t('interview.practiceProblems')} {topicTitle?.toLowerCase()}
               </p>
             </div>
 
