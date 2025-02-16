@@ -1,3 +1,4 @@
+
 export const translations = {
   en: {
     nav: {
@@ -94,13 +95,13 @@ export const translations = {
           description: "Need a quick response? Contact me via Telegram for prompt communication.",
           button: "Message on Telegram"
         }
-      },
-      interview: {
+      }
+    },
+    interview: {
       title: "Interview Preparation",
       description: "Choose a topic to practice problems and prepare for technical interviews",
       backToTopics: "Back to Topics",
       practiceProblems: "Practice problems for"
-    }
     }
   },
   ru: {
@@ -198,13 +199,13 @@ export const translations = {
           description: "Нужен быстрый ответ? Свяжитесь со мной через Telegram для оперативного общения.",
           button: "Написать в Telegram"
         }
-      },
-      interview: {
+      }
+    },
+    interview: {
       title: "Подготовка к Интервью",
       description: "Выберите тему для практики задач и подготовки к техническим интервью",
       backToTopics: "Назад к Темам",
       practiceProblems: "Практические задачи по теме"
-    }
     }
   }
 };
