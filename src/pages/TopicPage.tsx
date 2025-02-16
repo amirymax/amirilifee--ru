@@ -119,6 +119,7 @@ const topicData: Record<string, TopicSection[]> = {
 const TopicPage = () => {
   const { topic } = useParams();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   
   const topicSections = topic ? topicData[topic] : [];
   const topicTitle = topic?.split("-").map(word => 
@@ -135,7 +136,7 @@ const TopicPage = () => {
             className="mb-6"
             onClick={() => navigate("/interview")}
           >
-              <ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-4 w-4" />
             {t('interview.backToTopics')}
           </Button>
           
