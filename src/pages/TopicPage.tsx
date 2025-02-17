@@ -36,15 +36,15 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Group Anagrams",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/group-anagrams/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/YMCEGVEc5n0",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/49.%20Group%20Anagrams.py",
         },
         {
           name: "Top K Frequent Elements",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/top-k-frequent-elements/",
           youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/347.%20Top%20K%20Frequent%20Elements.py",
         },
         {
           name: "Product of Array Except Self",
