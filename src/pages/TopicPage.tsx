@@ -43,7 +43,7 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Top K Frequent Elements",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/top-k-frequent-elements/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
+          youtubeUrl: "https://youtu.be/2t0tMky_Nvg",
           githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/347.%20Top%20K%20Frequent%20Elements.py",
         },
         {
