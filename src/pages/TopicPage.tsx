@@ -50,8 +50,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Product of Array Except Self",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/product-of-array-except-self/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/nu_I2NO_Q48",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/238.%20Product%20of%20Array%20Except%20Self.py",
         },
         {
           name: "Valid Sudoku",
