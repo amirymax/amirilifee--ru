@@ -57,8 +57,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Valid Sudoku",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/valid-sudoku/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/vEzN_4hbDTw",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/36.%20Valid%20Sudoku.py",
         },
         {
           name: "Longest Consecutive Sequence",
