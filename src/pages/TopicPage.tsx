@@ -64,8 +64,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Longest Consecutive Sequence",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/longest-consecutive-sequence/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/LSpg-TjH1JM",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Arrays%26Hashing/128.%20Longest%20Consecutive%20Sequence.py",
         },
         
       ],
