@@ -79,8 +79,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Valid Palindrome",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/valid-palindrome/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/odupKkwBiZs",
+          githubUrl: "https://tinyurl.com/leetcode-valid-palindrome",
         },
         {
           name: "Two Sum II - Input Array Is Sorted",
