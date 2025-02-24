@@ -86,8 +86,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Two Sum II - Input Array Is Sorted",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/lTF5-JXP7X0",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Two%20Pointers/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.py",
         },
         {
           name: "3Sum",
