@@ -93,8 +93,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "3Sum",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/3sum/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/IFAeXPPjV_g",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Two%20Pointers/15.%203Sum",
         },
         {
           name: "Container With Most Water",
