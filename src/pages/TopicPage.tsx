@@ -100,8 +100,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Container With Most Water",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/container-with-most-water/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee",
-          githubUrl: "https://github.com/amirymax",
+          youtubeUrl: "https://youtu.be/jmClZVGWsf4",
+          githubUrl: "https://github.com/amirymax/FromVideos/tree/main/Two%20Pointers",
         },
         {
           name: "Trapping Rain Water",
