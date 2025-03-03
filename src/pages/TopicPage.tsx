@@ -167,6 +167,9 @@ const topicData: Record<string, TopicSection[]> = {
           youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
           githubUrl: "https://github.com/amirymax/",
         },
+      ],
+    },
+  ],
 
   "binary-search": [
     {
