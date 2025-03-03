@@ -105,11 +105,124 @@ const topicData: Record<string, TopicSection[]> = {
         },
         {
           name: "Trapping Rain Water",
-          difficulty: "Medium" as const,
+          difficulty: "Hard" as const,
           url: "https://leetcode.com/problems/trapping-rain-water/",
           youtubeUrl: "https://www.youtube.com/@amirilifee",
           githubUrl: "https://github.com/amirymax",
         },
+      ],
+    },
+  ],
+
+  "stack": [
+    {
+      title: "Stack",
+      problems: [
+        {
+          name: "Valid Parentheses",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/valid-parentheses/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Min Stack",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/min-stack/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Evaluate Reverse Polish Notation",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Generate Parentheses",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/generate-parentheses/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Daily Temperatures",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/daily-temperatures/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Car Fleet",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/car-fleet/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+         {
+          name: "Largest Rectangle in Histogram",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+
+  "binary-search": [
+    {
+      title: "Binary Search",
+      problems: [
+        {
+          name: "Binary Search",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/binary-search/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Search a 2D Matrix",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/search-a-2d-matrix/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Koko Eating Bananas",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/koko-eating-bananas/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Find Minimum in Rotated Sorted Array",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Search in Rotated Sorted Array",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Time Based Key-Value Store",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/time-based-key-value-store/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+         {
+          name: "Median of Two Sorted Arrays",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        
+        
       ],
     },
   ],
