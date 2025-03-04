@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
@@ -7,28 +8,29 @@ import { Github, Mail, MessageSquare, Instagram, Youtube, Linkedin } from "lucid
 import { useToast } from "./ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const BOT_TOKEN = "7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc";
+const CHAT_ID = "1007463279";
+const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    telegram: "", // Новое поле для Телеграма
+    telegram: "",
     message: "",
   });
 
-  const TELEGRAM_API_URL = "https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage";
-  const CHAT_ID = "1007463279";
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const message = `
       📝 *Новая заявка с сайта:*
       👤 *Имя*: ${formData.name}
       📧 *Email*: ${formData.email}
-      
-      💬 *Сообщение*: ${formData.message || "Нет сообщения"}
+      📱 *Телеграм*: ${formData.telegram}
+      💬 *Сообщение*: ${formData.message}
     `;
 
     try {
@@ -42,24 +44,22 @@ const Contact = () => {
         }),
       });
 
-      if (response.ok) {
-        toast({
-          title: t("contact.form.sendSuccess"),
-          description: t("contact.form.sendMessage"),
-        });
-        setFormData({ name: "", email: "", telegram: "", message: "" }); // очищаем форму
-      } else {
-        toast({
-          title: t("contact.form.sendError"),
-          description: t("contact.form.errorMessage"),
-        });
+      if (!response.ok) {
+        throw new Error("Failed to send message");
       }
-    } catch (error) {
-      toast({
-        title: t("contact.form.sendError"),
-        description: t("contact.form.errorMessage"),
-      });
+    
+    toast({
+      title: t("contact.form.sendSuccess"),
+      description: t("contact.form.sendMessage"),
+    });
+
+    setFormData({ name: "", email: "", telegram: "", message: "" });
     }
+    catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить заявку. Попробуйте позже"
+      });
   };
 
   const handleChange = (
@@ -120,7 +120,6 @@ const Contact = () => {
                   name="telegram"
                   value={formData.telegram}
                   onChange={handleChange}
-                  required
                 />
               </div>
               <div>
