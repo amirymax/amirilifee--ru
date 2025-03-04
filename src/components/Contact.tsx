@@ -31,6 +31,7 @@ const sendToTelegram = async (data: { name: string; telegram: string; email: str
     });
 
     if (!response.ok) {
+      console.log("NOOOOOO not sent!");
       throw new Error("Failed to send message to Telegram");
     }
 
