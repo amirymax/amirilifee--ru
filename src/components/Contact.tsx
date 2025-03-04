@@ -60,13 +60,14 @@ const Contact = () => {
         title: "Ошибка",
         description: "Не удалось отправить заявку. Попробуйте позже"
       });
-  };
+  };}
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+}
 
   return (
     <section id="contact" className="section-padding bg-secondary/5">
