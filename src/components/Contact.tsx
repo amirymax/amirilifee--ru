@@ -14,7 +14,7 @@ const sendToTelegram = async (data: { name: string; telegram: string; email: str
   const message = `
 📝 Новое сообщение с сайта:
 👤 Имя: ${data.name}
-🔗 Telegram: ${data.telegram}
+🔗 Telegram: ${encodeURIComponent(data.telegram)}
 📧 Email: ${data.email}
 💬 Сообщение: ${data.message}
   `;
@@ -40,6 +40,7 @@ const sendToTelegram = async (data: { name: string; telegram: string; email: str
     console.error("Error sending message to Telegram:", error);
   }
 };
+
 
 const Contact = () => {
   const { toast } = useToast();
