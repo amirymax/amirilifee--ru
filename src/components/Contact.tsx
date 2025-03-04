@@ -17,7 +17,7 @@ const Contact = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    telegram: "",
+    tg: "",
     email: "",
     message: "",
   });
@@ -34,7 +34,7 @@ const Contact = () => {
     const message = `
       📝 *Новое сообщение с сайта:*
       👤 *Имя*: ${formData.name}
-      🔗 *TG*: ${formData.telegram}
+      🔗 *TG*: ${formData.tg}
       📧 *Email*: ${formData.email}
       💬 *Сообщение*: ${formData.message}
     `;
@@ -66,7 +66,7 @@ const Contact = () => {
         description: t("contact.form.sendMessage"),
       });
 
-      setFormData({ name: "", telegram: "", email: "", message: "" });
+      setFormData({ name: "", tg: "", email: "", message: "" });
     } catch (error) {
       toast({
         title: "Ошибка",
@@ -112,8 +112,8 @@ const Contact = () => {
               />
               <Input
                 placeholder={t("contact.form.telegram")}
-                name="telegram"
-                value={formData.telegram}
+                name="tg"
+                value={formData.tg}
                 onChange={handleChange}
                 required
               />
