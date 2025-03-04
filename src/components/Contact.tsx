@@ -40,15 +40,9 @@ const Contact = () => {
     `;
   console.log(message);
     try {
-      const response = await fetch(TELEGRAM_API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message,
-          parse_mode: "Markdown",
-        }),
-      });
+      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error("Не удалось отправить сообщение");
