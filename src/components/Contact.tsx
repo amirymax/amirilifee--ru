@@ -7,6 +7,39 @@ import { Github, Mail, MessageSquare, Instagram, Youtube, Linkedin } from "lucid
 import { useToast } from "./ui/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const BOT_TOKEN = "7896528015:AAHonD4gkY3xb2GDG_jE686DABM_R1YuVUk";
+const CHAT_ID = "1007463279";
+const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+const sendToTelegram = async (data: { name: string; telegram: string; email: string; message: string }) => {
+  const message = `
+📝 Новое сообщение с сайта:
+👤 Имя: ${data.name}
+🔗 Telegram: ${data.telegram}
+📧 Email: ${data.email}
+💬 Сообщение: ${data.message}
+  `;
+
+  try {
+    const response = await fetch(TELEGRAM_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "Markdown",
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send message to Telegram");
+    }
+
+    console.log("Message sent successfully to Telegram!");
+  } catch (error) {
+    console.error("Error sending message to Telegram:", error);
+  }
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
