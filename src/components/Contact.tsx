@@ -38,7 +38,7 @@ const Contact = () => {
       📧 *Email:* ${formData.email}
       💬 *Сообщение:* ${formData.message}
     `;
-
+  console.log(message);
     try {
       const response = await fetch(TELEGRAM_API_URL, {
         method: "POST",
