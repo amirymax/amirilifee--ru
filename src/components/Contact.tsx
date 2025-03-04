@@ -33,16 +33,24 @@ const Contact = () => {
 
     const message = `
       📝 *Новое сообщение с сайта:*
-      👤 *Имя:* ${formData.name}
-      🔗 *Telegram:* ${formData.telegram}
-      📧 *Email:* ${formData.email}
-      💬 *Сообщение:* ${formData.message}
+      👤 *Имя*: ${formData.name}
+      🔗 *Telegram*: ${formData.telegram}
+      📧 *Email*: ${formData.email}
+      💬 *Сообщение*: ${formData.message}
     `;
   console.log(message);
     try {
-      const url = `https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage?chat_id=1007463279&text=testingyou`;
+      // const url = `https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage?chat_id=1007463279&text=testingyou`;
 
-      const response = await fetch(url);
+      const response = await fetch(TELEGRAM_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: "Markdown",
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("Не удалось отправить сообщение");
