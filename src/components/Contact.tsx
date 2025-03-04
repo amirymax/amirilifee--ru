@@ -34,7 +34,7 @@ const Contact = () => {
     const message = `
       📝 *Новое сообщение с сайта:*
       👤 *Имя*: ${formData.name}
-      🔗 *TG*: ${formData.tg}
+       *TG*: ${formData.tg}
       📧 *Email*: ${formData.email}
       💬 *Сообщение*: ${formData.message}
     `;
