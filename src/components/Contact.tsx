@@ -70,6 +70,15 @@ const Contact = () => {
               </div>
               <div>
                 <Input
+                  placeholder={t("contact.form.telegram")}
+                  name="telegram"
+                  value={formData.telegram}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <Input
                   type="email"
                   placeholder={t("contact.form.email")}
                   name="email"
