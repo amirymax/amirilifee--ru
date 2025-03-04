@@ -27,7 +27,7 @@ const Contact = () => {
       📝 *Новая заявка с сайта:*
       👤 *Имя*: ${formData.name}
       📧 *Email*: ${formData.email}
-      📱 *Telegram*: ${formData.telegram}
+      
       💬 *Сообщение*: ${formData.message || "Нет сообщения"}
     `;
 
