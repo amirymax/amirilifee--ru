@@ -13,16 +13,53 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    telegram: "", // Новое поле для Телеграма
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const TELEGRAM_API_URL = "https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage";
+  const CHAT_ID = "1007463279";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: t("contact.form.sendSuccess"),
-      description: t("contact.form.sendMessage"),
-    });
-    setFormData({ name: "", email: "", message: "" });
+
+    const message = `
+      📝 *Новая заявка с сайта:*
+      👤 *Имя*: ${formData.name}
+      📧 *Email*: ${formData.email}
+      📱 *Telegram*: ${formData.telegram}
+      💬 *Сообщение*: ${formData.message || "Нет сообщения"}
+    `;
+
+    try {
+      const response = await fetch(TELEGRAM_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: "Markdown",
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: t("contact.form.sendSuccess"),
+          description: t("contact.form.sendMessage"),
+        });
+        setFormData({ name: "", email: "", telegram: "", message: "" }); // очищаем форму
+      } else {
+        toast({
+          title: t("contact.form.sendError"),
+          description: t("contact.form.errorMessage"),
+        });
+      }
+    } catch (error) {
+      toast({
+        title: t("contact.form.sendError"),
+        description: t("contact.form.errorMessage"),
+      });
+    }
   };
 
   const handleChange = (
@@ -73,6 +110,15 @@ const Contact = () => {
                   placeholder={t("contact.form.email")}
                   name="email"
                   value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <Input
+                  placeholder={t("contact.form.telegram")}
+                  name="telegram"
+                  value={formData.telegram}
                   onChange={handleChange}
                   required
                 />
