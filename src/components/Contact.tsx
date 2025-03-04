@@ -51,15 +51,25 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
     await sendToTelegram(formData);
     toast({
       title: t("contact.form.sendSuccess"),
       description: t("contact.form.sendMessage"),
     });
     setFormData({ name: "", telegram: "", email: "", message: "" });
-  };
+  } catch (error) {
+    toast({
+      title: "Ошибка",
+      description: "Не удалось отправить сообщение.",
+      variant: "destructive",
+    });
+  }
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
