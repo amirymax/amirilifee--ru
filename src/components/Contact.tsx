@@ -53,6 +53,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    await sendToTelegram(formData);
     toast({
       title: t("contact.form.sendSuccess"),
       description: t("contact.form.sendMessage"),
