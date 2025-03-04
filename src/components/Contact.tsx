@@ -38,7 +38,12 @@ const Contact = () => {
       📧 *Email*: ${formData.email}
       💬 *Сообщение*: ${formData.message}
     `;
-  console.log(message);
+    const new_mes = JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: "Markdown",
+        });
+  console.log(new_mes);
     try {
       // const url = `https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage?chat_id=1007463279&text=testingyou`;
 
