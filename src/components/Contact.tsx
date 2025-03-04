@@ -45,8 +45,8 @@ const Contact = () => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     telegram: "",
+    email: "",
     message: "",
   });
 
