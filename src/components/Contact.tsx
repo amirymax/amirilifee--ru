@@ -25,14 +25,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = `
-      📝 *Новая заявка с сайта:*
-      👤 *Имя*: ${formData.name}
-      📧 *Email*: ${formData.email}
-
-      💬 *Сообщение*: ${formData.message}
-    `;
-
+   const message = `
+  📝 <strong>Новая заявка с сайта:</strong>
+  👤 <strong>Имя</strong>: ${formData.name}
+  📧 <strong>Email</strong>: ${formData.email}
+  📱 <strong>Телеграм</strong>: ${formData.telegram}
+  💬 <strong>Сообщение</strong>: ${formData.message}
+`;
     try {
       const response = await fetch(TELEGRAM_API_URL, {
         method: "POST",
@@ -40,7 +39,7 @@ const Contact = () => {
         body: JSON.stringify({
           chat_id: CHAT_ID,
           text: message,
-          parse_mode: "Markdown",
+          parse_mode: "HTML",
         }),
       });
 
