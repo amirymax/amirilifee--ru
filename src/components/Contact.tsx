@@ -40,7 +40,7 @@ const Contact = () => {
     `;
   console.log(message);
     try {
-      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+      const url = `https://api.telegram.org/bot7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc/sendMessage?chat_id=1007463279&text=${message}&parse_mode=Markdown`;
 
       const response = await fetch(url);
 
