@@ -82,6 +82,7 @@ export const translations = {
       description: "Have a project or want to learn programming? I'd be happy to discuss with you.",
       form: {
         name: "Your Name",
+        telegram: "Your Telegram",
         email: "Your Email",
         message: "Your Message",
         send: "Send Message",
@@ -186,6 +187,7 @@ export const translations = {
       description: "Есть проект или хотите изучать программирование? Буду рад обсудить с вами.",
       form: {
         name: "Ваше Имя",
+        telegram: "Ваш Telegram",
         email: "Ваш Email",
         message: "Ваше Сообщение",
         send: "Отправить Сообщение",
