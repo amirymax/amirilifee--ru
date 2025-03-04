@@ -12,7 +12,7 @@ const BOT_TOKEN = "7896528015:AAFo6wn_cAPwqiffhqwOAnJhiRWYvrdn7zc";
 const CHAT_ID = "1007463279";
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-const Contact = () => {
+export const Contact = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ const Contact = () => {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-}
+
 
   return (
     <section id="contact" className="section-padding bg-secondary/5">
@@ -228,5 +228,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;
