@@ -223,12 +223,146 @@ const topicData: Record<string, TopicSection[]> = {
           url: "https://leetcode.com/problems/median-of-two-sorted-arrays/",
           youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
           githubUrl: "https://github.com/amirymax/",
-        },
-        
-        
+        },        
       ],
     },
   ],
+
+  "sliding-window": [
+    {
+      title: "Sliding Window",
+      problems: [
+        {
+          name: "Best Time to Buy and Sell Stock",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Longest Substring Without Repeating Characters",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Longest Repeating Character Replacement",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/longest-repeating-character-replacement/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Permutation In String",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/permutation-in-string/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Minimum Window Substring",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/minimum-window-substring/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Sliding Window Maximum",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/sliding-window-maximum/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+      ],
+    },
+  ],
+
+  "linked-list": [
+    {
+      title: "Linked List",
+      problems: [
+        {
+          name: "Reverse Linked List",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/reverse-linked-list/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Merge Two Sorted Lists",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/merge-two-sorted-lists/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Linked List Cycle",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/linked-list-cycle/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Reorder List",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/reorder-list/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Remove Nth Node From End of List",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Copy List With Random Pointer",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/copy-list-with-random-pointer/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Add Two Numbers ",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/add-two-numbers/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Find The Duplicate Number",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/find-the-duplicate-number/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "LRU Cache",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/lru-cache/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Merge K Sorted Lists",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/merge-k-sorted-lists/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Reverse Nodes In K Group",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+      ],
+    },
+  ],
+  
   // Add more topics as needed
 };
 
