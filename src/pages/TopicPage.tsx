@@ -325,7 +325,7 @@ const topicData: Record<string, TopicSection[]> = {
           githubUrl: "https://github.com/amirymax/",
         },
         {
-          name: "Add Two Numbers ",
+          name: "Add Two Numbers",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/add-two-numbers/",
           youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
@@ -362,6 +362,121 @@ const topicData: Record<string, TopicSection[]> = {
       ],
     },
   ],
+
+  "trees": [
+    {
+      title: "Trees",
+      problems: [
+        {
+          name: "Invert Binary Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/invert-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Maximum Depth of Binary Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Diameter of Binary Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/diameter-of-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Balanced Binary Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/balanced-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Same Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/same-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Subtree of Another Tree",
+          difficulty: "Easy" as const,
+          url: "https://leetcode.com/problems/subtree-of-another-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Lowest Common Ancestor of a Binary Search Tree",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Binary Tree Level Order Traversal",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Binary Tree Right Side View",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/binary-tree-right-side-view/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Count Good Nodes In Binary Tree",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Validate Binary Search Tree",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/validate-binary-search-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Kth Smallest Element In a Bste",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Construct Binary Tree From Preorder And Inorder Traversal",
+          difficulty: "Medium" as const,
+          url: "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Binary Tree Maximum Path Sum",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+        {
+          name: "Serialize And Deserialize Binary Tree",
+          difficulty: "Hard" as const,
+          url: "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
+          githubUrl: "https://github.com/amirymax/",
+        },
+      ],
+    },
+  ],
+
+  
   
   // Add more topics as needed
 };
