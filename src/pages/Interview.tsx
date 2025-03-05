@@ -14,13 +14,15 @@ const interviewTopics = [
   { name: "Stack", value: "stack" },
   { name: "Binary Search", value: "binary-search" },
   { name: "Sliding Window", value: "sliding-window" },
-  { name: "Binary Tree", value: "binary-tree" },
+  { name: "Linked List", value: "linked-list" },
+  { name: "Trees", value: "trees" },
+  { name: "Tries", value: "tries" },
+  { name: "Heap/Priority Queue", value: "heap" },
   { name: "Backtracking", value: "backtracking" },
   { name: "Graph", value: "graph" },
   { name: "Dynamic Programming", value: "dp" },
-  { name: "Heap", value: "heap" },
-  { name: "Greedy", value: "greedy" },
   { name: "Intervals", value: "intervals" },
+  { name: "Greedy", value: "greedy" },
   { name: "Math & Geometry", value: "math" },
 ];
 
