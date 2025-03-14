@@ -122,8 +122,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Valid Parentheses",
           difficulty: "Easy" as const,
           url: "https://leetcode.com/problems/valid-parentheses/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
-          githubUrl: "https://github.com/amirymax/",
+          youtubeUrl: "https://youtu.be/BLaog36sOqg",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Stack/20.%20Valid%20Parentheses.py",
         },
         {
           name: "Min Stack",
