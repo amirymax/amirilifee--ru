@@ -129,8 +129,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Min Stack",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/min-stack/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
-          githubUrl: "https://github.com/amirymax/",
+          youtubeUrl: "https://youtu.be/I7mz1kClcws",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Stack/155.%20Min%20Stack.py",
         },
         {
           name: "Evaluate Reverse Polish Notation",
