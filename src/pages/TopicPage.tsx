@@ -143,8 +143,8 @@ const topicData: Record<string, TopicSection[]> = {
           name: "Generate Parentheses",
           difficulty: "Medium" as const,
           url: "https://leetcode.com/problems/generate-parentheses/",
-          youtubeUrl: "https://www.youtube.com/@amirilifee/videos",
-          githubUrl: "https://github.com/amirymax/",
+          youtubeUrl: "https://youtu.be/O5pxNQXAIUc",
+          githubUrl: "https://github.com/amirymax/FromVideos/blob/main/Stack/22.%20Generate%20Parentheses.py",
         },
         {
           name: "Daily Temperatures",
