@@ -116,7 +116,6 @@ const Course = () => {
         { text: "Вақти хондан ихтиёрӣ", included: true },
         { text: "Маслиҳатҳо баъди тамом кардани курс", included: true },
         { text: "Тестҳои худсанҷишӣ", included: true },
-        { text: "Зангҳои шахсӣ", included: false },
         { text: "Зангҳои гурӯҳӣ", included: true },
 
       ],

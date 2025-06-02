@@ -211,7 +211,7 @@ const Contact = () => {
               </p>
               <Button variant="secondary" className="w-full" asChild>
                 <a
-                  href="https://t.me/Amiri_Talks"
+                  href="https://t.me/AmiriCode"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -46,7 +46,7 @@ const About = () => {
 
             {/* Кнопка "Скачать резюме" */}
             <a
-              href="https://drive.google.com/file/d/1rAu9AYIxFAIw_iiwNejZtBxvlqT0ODVk/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1wACwGSo0JFOXGzLyFRd5BFTqXAEWvQ3r/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
