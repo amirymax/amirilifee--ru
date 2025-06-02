@@ -241,7 +241,7 @@ const Course = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              🔥 Курси >_CODE: Аз 0 то БОТСОЗӢ 🔥
+              &#x1F525; Курси &gt;_CODE: Аз 0 то БОТСОЗӢ &#x1F525;
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
               Барномаи омӯзишӣ барои онҳое, ки орзу доранд БАРНОМАСОЗ шаванд!
@@ -475,8 +475,8 @@ const Course = () => {
                       className="w-full h-10 px-3 py-2 rounded-md bg-white/10 border border-white/20 text-white"
                     >
                       <option value="" className="text-gray-900">Нархро интихоб кунед</option>
-                      <option value="basic" className="text-gray-900">>_CODE: Mini - 350 TJS</option>
-                      <option value="mentorship" className="text-gray-900">>_CODE: PRO - 399 TJS</option>
+                      <option value="basic" className="text-gray-900">&gt;CODE: Mini - 350 TJS</option>
+                      <option value="mentorship" className="text-gray-900">&gt;CODE: PRO - 399 TJS</option>
                       <option value="camp" className="text-gray-900">ШАХСӢ - 150TJS/дарс</option>
                     </select>
                   </div>
