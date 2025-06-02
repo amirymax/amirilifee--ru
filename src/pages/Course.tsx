@@ -29,7 +29,7 @@ const Course = () => {
     const message = `
   📝 <strong>Новая заявка с сайта:</strong>
   👤 <strong>Имя</strong>: ${formData.name}
-  📧 <strong>Email</strong>: ${formData.plan}
+  📧 <strong>ТАРИФ</strong>: ${formData.plan}
   📱 <strong>Телеграм</strong>: ${formData.telegram}
   💬 <strong>Сообщение</strong>: ${formData.message}
 `;
@@ -475,9 +475,9 @@ const Course = () => {
                       className="w-full h-10 px-3 py-2 rounded-md bg-white/10 border border-white/20 text-white"
                     >
                       <option value="" className="text-gray-900">Нархро интихоб кунед</option>
-                      <option value="basic" className="text-gray-900">&gt;CODE: Mini - 350 TJS</option>
-                      <option value="mentorship" className="text-gray-900">&gt;CODE: PRO - 399 TJS</option>
-                      <option value="camp" className="text-gray-900">ШАХСӢ - 150TJS/дарс</option>
+                      <option value="CODE: Mini" className="text-gray-900">&gt;CODE: Mini - 350 TJS</option>
+                      <option value="CODE: PRO" className="text-gray-900">&gt;CODE: PRO - 399 TJS</option>
+                      <option value="ШАХСӢ" className="text-gray-900">ШАХСӢ - 150TJS/дарс</option>
                     </select>
                   </div>
                   <div>
