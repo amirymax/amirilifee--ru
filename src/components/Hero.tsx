@@ -48,10 +48,12 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" className="group">
-              {t('hero.myWorks')}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Button size="lg" className="group bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-bold shadow-2xl shadow-red-500/25 border-0 animate-pulse" asChild>
+              <Link to="/course">
+                🔥 Курс
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              </Button>
             <Button size="lg" variant="secondary">
               <a href="#contact">{t('hero.contact')}</a>
             </Button>

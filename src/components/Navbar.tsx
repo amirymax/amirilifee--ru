@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import { ArrowRight, BookOpen } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { label: t('nav.home'), href: "/" },
+    { label: t('nav.home'), href: "#home" },
     { label: t('nav.services'), href: "#services" },
     { label: t('nav.projects'), href: "#projects" },
     { label: t('nav.about'), href: "#about" },
@@ -71,6 +71,12 @@ const Navbar = () => {
               </Link>
             )
           ))}
+          <Button size="lg" className="group bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-bold shadow-2xl shadow-red-500/25 border-0 animate-pulse" asChild>
+              <Link to="/course#top">
+                🔥 Курс
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              </Button>
           <Button variant="secondary" className="ml-4" onClick={() => handleNavigation("#contact")}>
             {t('nav.getInTouch')}
           </Button>
@@ -115,6 +121,11 @@ const Navbar = () => {
                   </Link>
                 )
               ))}
+              <Button size="lg" className="group bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-bold shadow-2xl shadow-red-500/25 border-0 animate-pulse" asChild>
+              <Link to="/course">
+                🔥 Курс
+              </Link>
+              </Button>
               <Button variant="secondary" onClick={() => {
                 handleNavigation("#contact");
                 setIsOpen(false);

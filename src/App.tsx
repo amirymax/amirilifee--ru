@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Roadmaps from "./pages/Roadmaps";
 import Interview from "./pages/Interview";
 import TopicPage from "./pages/TopicPage";
+import Course from "./pages/Course";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/roadmaps" element={<Roadmaps />} />
             <Route path="/interview" element={<Interview />} />
             <Route path="/interview/:topic" element={<TopicPage />} />
+            <Route path="/course" element={<Course />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
